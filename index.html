@@ -1,269 +1,360 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
-  <style>
-    /* ---- Reset & Base ---- */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Poppins", sans-serif;
-    }
-    body {
-      background: #ffffff;
-      color: #333;
-      line-height: 1.6;
-    }
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-    h1, h2, h3 {
-      font-weight: 600;
-    }
-    section {
-      padding: 60px 15%;
-    }
-
-    /* ---- Navbar ---- */
-    nav {
-      position: fixed;
-      width: 100%;
-      top: 0;
-      left: 0;
-      background: #fff;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 10%;
-      z-index: 1000;
-    }
-    nav .logo {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: #4CAF50;
-    }
-    nav ul {
-      display: flex;
-      gap: 20px;
-      list-style: none;
-    }
-    nav ul li a {
-      font-weight: 500;
-      transition: color 0.3s ease;
-    }
-    nav ul li a:hover {
-      color: #4CAF50;
-    }
-
-    /* ---- Hero ---- */
-    .hero {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 20px;
-      color: #555;
-    }
-    .hero a {
-      display: inline-block;
-      padding: 10px 20px;
-      background: #4CAF50;
-      color: #fff;
-      border-radius: 30px;
-      transition: background 0.3s ease;
-    }
-    .hero a:hover {
-      background: #388E3C;
-    }
-
-    /* ---- About ---- */
-    .about {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 40px;
-      align-items: center;
-    }
-    .about img {
-      width: 250px;
-      border-radius: 50%;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
-    .about-text {
-      flex: 1;
-    }
-
-    /* ---- Skills ---- */
-    .skills {
-      background: #f9f9f9;
-      text-align: center;
-    }
-    .skills-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-      margin-top: 20px;
-    }
-    .skill {
-      padding: 10px 20px;
-      border: 1px solid #ddd;
-      border-radius: 20px;
-      background: #fff;
-      transition: transform 0.3s;
-    }
-    .skill:hover {
-      transform: scale(1.05);
-      border-color: #4CAF50;
-    }
-
-    /* ---- Projects ---- */
-    .projects {
-      text-align: center;
-    }
-    .project-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
-    }
-    .project {
-      background: #fff;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-    }
-    .project:hover {
-      transform: translateY(-5px);
-    }
-    .project img {
-      width: 100%;
-      height: 150px;
-      object-fit: cover;
-    }
-    .project h3 {
-      padding: 15px;
-    }
-
-    /* ---- Contact ---- */
-    .contact {
-      background: #f9f9f9;
-      text-align: center;
-    }
-    .contact a {
-      display: inline-block;
-      margin: 10px;
-      padding: 10px 20px;
-      border: 1px solid #4CAF50;
-      border-radius: 25px;
-      transition: all 0.3s;
-    }
-    .contact a:hover {
-      background: #4CAF50;
-      color: #fff;
-    }
-
-    /* ---- Footer ---- */
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #333;
-      color: #fff;
-      font-size: 0.9rem;
-    }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Adwaith — Cybersecurity Portfolio</title>
+  <meta name="description" content="Cybersecurity portfolio — projects, skills, resume, contact." />
 </head>
 <body>
-  <!-- Navbar -->
-  <nav>
-    <div class="logo">MyPortfolio</div>
-    <ul>
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- Hero Section -->
-  <section class="hero" id="hero">
-    <h1>Hello, I'm <span style="color:#4CAF50;">Adwaith U R</span></h1>
-    <p>Ethical Hacker |  Developer</p>
-    <a href="https://mail.google.com/mail/?view=cm&to=adwaithur.contact@gmail.com">HIRE ME</a>
-  </section>
-
-  <!-- About Section -->
-  <section class="about" id="about">
-    <img src="https://via.placeholder.com/250" alt="Profile Picture" />
-    <div class="about-text">
-      <h2>About Me</h2>
-      <p>
-       Hi, I’m Adwaith, a cybersecurity enthusiast focused on ethical hacking, network security, and protecting digital systems. I help businesses and individuals identify vulnerabilities and secure their online presence.
-
-I’m passionate about problem-solving, learning new security techniques, and delivering reliable solutions. My goal is to make the digital world safer and more secure.
-      </p>
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section class="skills" id="skills">
-    <h2>Skills</h2>
-    <div class="skills-list">
-      <div class="skill">Penetration Testing</div>
-      <div class="skill">Vulnerability Assessment</div>
-      <div class="skill">Web Development</div>
-      <!-- <div class="skill">Python</div>
-      <div class="skill">Django</div>
-      <div class="skill">Cybersecurity</div> -->
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section class="projects" id="projects">
-    <h2>Projects</h2>
-    <div class="project-list">
-      <div class="project">
-        <img src="https://via.placeholder.com/400x200" alt="Project 1" />
-        <h3>HireHub</h3>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">AD</div>
+        <div>
+          <div style="font-weight:800">Adwaith</div>
+          <div style="font-size:12px;color:var(--muted)">Cybersecurity Student • Pentester-in-training</div>
+        </div>
       </div>
-      <div class="project">
-        <img src="https://via.placeholder.com/400x200" alt="Project 2" />
-        <h3>ScamSense</h3>
+
+      <nav aria-label="Main Navigation">
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#skills">Skills</a>
+        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#resume">Resume</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </nav>
+
+      <div class="controls">
+        <button class="btn" id="downloadResume">Download Resume</button>
+        <button class="btn" id="themeToggle" aria-pressed="false">🌙</button>
+        <a class="cta" href="#contact">Hire me</a>
       </div>
-      <div class="project">
-        <img src="https://via.placeholder.com/400x200" alt="Project 3" />
-        <h3>Project Three</h3>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <p style="color:var(--accent);font-weight:700;margin:0 0 8px">Hi, I'm</p>
+          <h1>Adwaith — Cybersecurity Enthusiast <span class="typing" id="typed">Pentesting · Incident Response</span></h1>
+          <p style="margin-top:12px;color:var(--muted);max-width:70%">I build secure systems, break them ethically, and teach others how to defend. I specialise in penetration testing, log analysis, and automation for security workflows.</p>
+
+          <div style="display:flex;gap:10px;margin-top:18px">
+            <a class="btn" href="#projects">See Projects</a>
+            <a class="btn" href="#contact">Work with me</a>
+          </div>
+
+          <div style="margin-top:18px;display:flex;gap:12px;align-items:center">
+            <div style="display:flex;gap:12px;align-items:center;color:var(--muted)">
+              <div style="font-weight:700">Open to:</div>
+              <div>Internships · Freelance · Bug Bounties</div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="profile-card">
+          <div class="avatar">AD</div>
+          <div style="font-weight:700">Adwaith</div>
+          <div style="color:var(--muted);font-size:13px;margin-top:6px">Karnataka, India • available for remote</div>
+
+          <div class="stat-grid" style="margin-top:12px">
+            <div style="text-align:center">
+              <div class="stat">12+</div>
+              <div style="font-size:12px;color:var(--muted)">Projects</div>
+            </div>
+            <div style="text-align:center">
+              <div class="stat">2</div>
+              <div style="font-size:12px;color:var(--muted)">Certs</div>
+            </div>
+            <div style="text-align:center">
+              <div class="stat">200+</div>
+              <div style="font-size:12px;color:var(--muted)">CTF pts</div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="fade-in">
+        <div class="grid-3">
+          <div class="card">
+            <h2 class="section-title">About</h2>
+            <p style="color:var(--muted);line-height:1.5">I'm a cybersecurity student focused on practical offensive security, blue team fundamentals, and automation. I enjoy building tools, writing clean reports, and contributing to open-source security projects. I value ethics, continuous learning, and clear communication.</p>
+            <ul style="margin-top:12px;color:var(--muted);padding-left:18px">
+              <li>Penetration testing (web, network)</li>
+              <li>Incident response & log analysis</li>
+              <li>Scripting: Python, Bash</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h2 class="section-title">Contact</h2>
+            <p style="color:var(--muted);">Email: <a href="mailto:your.email@example.com" style="color:var(--accent)">your.email@example.com</a></p>
+            <p style="color:var(--muted)">Socials: <a style="color:var(--accent)" href="#">GitHub</a> · <a style="color:var(--accent)" href="#">LinkedIn</a> · <a style="color:var(--accent)" href="#">Twitter</a></p>
+            <div style="margin-top:12px">
+              <small style="color:var(--muted)">Pro tip: change the contact mail address in the code to your real address.</small>
+            </div>
+          </div>
+
+          <div class="card">
+            <h2 class="section-title">Highlights</h2>
+            <div style="color:var(--muted);">
+              <p style="margin:0 0 8px">• Hands-on CTFs, basic malware analysis, and small red-team engagements in labs.</p>
+              <p style="margin:0 0 8px">• Built automation scripts to triage alerts and simplify recon.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills">
+        <h2 class="section-title">Skills</h2>
+        <div class="card" style="padding:18px">
+          <div style="display:flex;gap:18px;flex-wrap:wrap">
+            <div style="flex:1 1 420px">
+              <div class="skill">
+                <div class="label"><span>Web App Pentesting</span><span>85%</span></div>
+                <div class="bar"><i data-width="85"></i></div>
+              </div>
+
+              <div class="skill">
+                <div class="label"><span>Network Pentesting</span><span>70%</span></div>
+                <div class="bar"><i data-width="70"></i></div>
+              </div>
+
+              <div class="skill">
+                <div class="label"><span>Scripting (Python/Bash)</span><span>80%</span></div>
+                <div class="bar"><i data-width="80"></i></div>
+              </div>
+
+              <div class="skill">
+                <div class="label"><span>Incident Response</span><span>65%</span></div>
+                <div class="bar"><i data-width="65"></i></div>
+              </div>
+            </div>
+
+            <div style="flex:1 1 250px">
+              <h3 style="margin-top:0">Tools</h3>
+              <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:8px">
+                <div class="tag">Nmap</div>
+                <div class="tag">Burp Suite</div>
+                <div class="tag">Metasploit</div>
+                <div class="tag">Wireshark</div>
+                <div class="tag">ELK</div>
+                <div class="tag">Docker</div>
+                <div class="tag">Ghidra</div>
+              </div>
+
+              <h3 style="margin-top:12px">Languages</h3>
+              <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:8px">
+                <div class="tag">Python</div>
+                <div class="tag">Bash</div>
+                <div class="tag">HTML/CSS/JS</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects">
+          <article class="card project" data-tech="automation">
+            <div class="project-img" aria-hidden="true"></div>
+            <h3 class="proj-title">Alert Triage Script</h3>
+            <p style="color:var(--muted);margin:6px 0">Python tool to prioritise security alerts and generate summary reports.</p>
+            <div class="proj-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Automation</span>
+              <button class="btn small" onclick="openProject(this)">View</button>
+            </div>
+          </article>
+
+          <article class="card project" data-tech="recon">
+            <div class="project-img" aria-hidden="true"></div>
+            <h3 class="proj-title">Recon Toolkit</h3>
+            <p style="color:var(--muted);margin:6px 0">A set of shell tools for fast passive recon and OSINT collection.</p>
+            <div class="proj-tags">
+              <span class="tag">Bash</span>
+              <span class="tag">Tools</span>
+              <button class="btn small" onclick="openProject(this)">View</button>
+            </div>
+          </article>
+
+          <article class="card project" data-tech="web">
+            <div class="project-img" aria-hidden="true"></div>
+            <h3 class="proj-title">Vulnerable Web Lab</h3>
+            <p style="color:var(--muted);margin:6px 0">A deliberately vulnerable docker-based web app to practise exploits in a safe environment.</p>
+            <div class="proj-tags">
+              <span class="tag">Docker</span>
+              <span class="tag">Web</span>
+              <button class="btn small" onclick="openProject(this)">View</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- RESUME -->
+      <section id="resume">
+        <h2 class="section-title">Resume</h2>
+        <div class="card">
+          <div class="timeline">
+            <div class="entry">
+              <div class="dot"></div>
+              <div style="font-weight:700">Cybersecurity Intern — ACME Security</div>
+              <div style="color:var(--muted);font-size:13px">Jan 2025 — Apr 2025</div>
+              <div style="margin-top:8px;color:var(--muted)">Assisted pentest engagements, wrote findings, and automated repetitive tasks.</div>
+            </div>
+
+            <div class="entry">
+              <div class="dot"></div>
+              <div style="font-weight:700">BSc — Computer Science</div>
+              <div style="color:var(--muted);font-size:13px">2021 — 2024</div>
+              <div style="margin-top:8px;color:var(--muted)">Focused on networks, operating systems, and secure coding practices.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <h2 class="section-title">Contact</h2>
+        <div class="card">
+          <form id="contactForm">
+            <input type="text" id="name" placeholder="Your name" required />
+            <input type="email" id="email" placeholder="Your email" required />
+            <input type="text" id="subject" placeholder="Subject" />
+            <textarea id="message" placeholder="Message (tell me what you need)" required></textarea>
+            <div style="display:flex;gap:8px">
+              <button type="submit" class="cta">Send Message</button>
+              <button type="button" class="btn" id="clearForm">Clear</button>
+            </div>
+            <div id="formMsg" style="color:var(--muted);font-size:13px;margin-top:8px"></div>
+          </form>
+        </div>
+      </section>
+
+      <footer>
+        <div>© <span id="year">2025</span> Adwaith — Built with care • <span style="color:var(--muted)">Prefer ethical testing only</span></div>
+      </footer>
+    </main>
+  </div>
+
+  <template id="projectModalTpl">
+    <div style="position:fixed;inset:0;background:rgba(2,6,23,0.6);display:grid;place-items:center;padding:20px;z-index:80">
+      <div style="max-width:840px;background:var(--card);padding:18px;border-radius:12px;position:relative">
+        <button onclick="closeModal()" style="position:absolute;right:12px;top:12px" class="btn">Close</button>
+        <h3 id="pmTitle"></h3>
+        <p id="pmDesc" style="color:var(--muted)"></p>
+        <pre id="pmCode" style="background:rgba(255,255,255,0.02);padding:12px;border-radius:8px;overflow:auto;color:var(--muted)"></pre>
       </div>
     </div>
-  </section>
+  </template>
 
-  <!-- Contact Section -->
-  <section class="contact" id="contact">
-    <h2>Contact Me</h2>
-    <p>Let’s connect! I’m open to collaborations and Freelance.</p>
-   <a href="https://mail.google.com/mail/?view=cm&to=adwaithur.contact@gmail.com" target="_blank">Email Me</a>
-    <a href="https://www.linkedin.com/in/adwaithur" target="_blank">LinkedIn</a>
-    <a href="https://github.com/zeus371" target="_blank">GitHub</a>
-  </section>
+  <script>
+    // small utilities
+    const byId = (id)=>document.getElementById(id);
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Adwaith. All rights reserved.</p>
-  </footer>
+    // theme toggle
+    const themeToggle = byId('themeToggle');
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if(prefersDark) document.body.classList.remove('light'); else document.body.classList.add('light');
+
+    function updateThemeUI(){
+      const isLight = document.body.classList.contains('light');
+      themeToggle.textContent = isLight ? '🌙' : '☀️';
+      themeToggle.setAttribute('aria-pressed', String(!isLight));
+    }
+    updateThemeUI();
+
+    themeToggle.addEventListener('click', ()=>{
+      document.body.classList.toggle('light');
+      updateThemeUI();
+    });
+
+    // animated skill bars (on scroll)
+    function animateSkills(){
+      document.querySelectorAll('.bar > i').forEach(el=>{
+        const width = el.getAttribute('data-width') || 0;
+        el.style.width = width + '%';
+      });
+    }
+    // reveal on scroll simple
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(en=>{ if(en.isIntersecting) { en.target.classList.add('fade-in'); } });
+    },{threshold:0.12});
+    document.querySelectorAll('section, .card, .project').forEach(el=>io.observe(el));
+
+    // trigger skill animation when skills visible
+    const skillsSection = document.getElementById('skills');
+    const skillsIo = new IntersectionObserver((entries)=>{ if(entries[0].isIntersecting) animateSkills(); },{threshold:0.25});
+    skillsIo.observe(skillsSection);
+
+    // typing effect
+    (function typeEffect(){
+      const el = byId('typed');
+      const phrases = ['Pentesting · Incident Response','CTF Player','Automation & Tooling'];
+      let p=0,i=0;let forward=true;
+      setInterval(()=>{
+        const txt = phrases[p];
+        if(forward){ i++; if(i>txt.length){ forward=false; setTimeout(()=>{},800);} }
+        else{ i--; if(i===0){ forward=true;p=(p+1)%phrases.length; } }
+        el.textContent = txt.slice(0,i);
+      },80);
+    })();
+
+    // projects modal
+    function openProject(btn){
+      const card = btn.closest('.project');
+      const title = card.querySelector('.proj-title').textContent;
+      const desc = card.querySelector('p').textContent;
+      const tpl = document.getElementById('projectModalTpl');
+      const node = tpl.content.cloneNode(true);
+      node.querySelector('#pmTitle').textContent = title;
+      node.querySelector('#pmDesc').textContent = desc;
+      node.querySelector('#pmCode').textContent = 'README / Link: Add your repo URL and a short README here';
+      document.body.appendChild(node);
+    }
+    function closeModal(){
+      const overlay = document.querySelector('body > [style*="position:fixed"]');
+      if(overlay) overlay.remove();
+    }
+
+    // contact form: simple client-side 'send' (opens mail client) and small validation
+    const contactForm = byId('contactForm');
+    contactForm.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const name = byId('name').value.trim();
+      const email = byId('email').value.trim();
+      const subject = byId('subject').value.trim() || 'Website contact';
+      const message = byId('message').value.trim();
+      if(!name || !email || !message){ byId('formMsg').textContent = 'Please fill required fields.'; return; }
+      // open mail client as fallback
+      const body = encodeURIComponent(`Name: ${name}%0AEmail: ${email}%0A%0A${message}`);
+      window.location.href = `mailto:your.email@example.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+      byId('formMsg').textContent = 'If your mail client opened, your message is ready. Otherwise copy and send manually.';
+    });
+
+    byId('clearForm').addEventListener('click', ()=>{ contactForm.reset(); byId('formMsg').textContent=''; });
+
+    // Download resume: generate a printable resume page in new tab (user can Save as PDF)
+    byId('downloadResume').addEventListener('click', ()=>{
+      const resumeHtml = `<!doctype html><html><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>Resume - Adwaith</title><style>body{font-family:Inter,Arial;padding:28px;color:#0b1220}h1{margin-bottom:6px}h2{margin-top:14px}section{margin-bottom:10px}</style></head><body><h1>Adwaith — Cybersecurity</h1><p>Contact: your.email@example.com</p><section><h2>Experience</h2><div><strong>Cybersecurity Intern — ACME Security</strong><div>Jan 2025 — Apr 2025</div><div>Assisted pentest engagements and automation.</div></div></section><section><h2>Education</h2><div><strong>BSc — Computer Science</strong><div>2021 — 2024</div></div></section><section><h2>Skills</h2><div>Web application testing, network testing, scripting, incident response</div></section></body></html>`;
+      const w = window.open('about:blank','_blank');
+      w.document.write(resumeHtml); w.document.close();
+    });
+
+    // small accessibility: update year
+    byId('year').textContent = new Date().getFullYear();
+
+    // keyboard: close modal with escape
+    document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeModal(); });
+
+    // Smooth focus outlines for in-page links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click', ()=>{a.blur();}));
+
+  </script>
+
 </body>
 </html>
